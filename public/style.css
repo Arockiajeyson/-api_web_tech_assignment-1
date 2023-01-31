@@ -1,0 +1,14 @@
+body{
+    background-color: bisque;
+}
+table,th,tr,td{
+    border: 2px solid red;
+    border-collapse: collapse;
+    height: 40px;
+    width: 410px;
+    text-align: center;
+}
+.contaner{
+    margin-left: 400px;
+    margin-top: 100px;
+}

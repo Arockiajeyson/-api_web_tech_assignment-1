@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>customer table</div>
+        <table>
+            <tr>
+                <th>customer_id</th>
+                <th>customer_name</th>
+                <th>email</th>
+            </tr>
+            <% findOrder.map((e)=>{ %>
+                <div>
+                    <tr>
+                        <td>
+                            <%= e._id %>
+                        </td>
+                        <td>
+                            <%= e.customer_name %>
+                        </td>
+                        <td>
+                            <%= e.email %>
+                        </td>
+                    </tr>
+                </div>
+                <%})%>
+        </table>
+</body>
+</html>

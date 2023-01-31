@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="contaner">
+        <div>
+            <h1>Inventory table</h1>
+            <table>
+                <tr>
+                    <th>inventory_id</th>
+                    <th>inventory_type</th>
+                    <th>item_name</th>
+                    <th>available_quantity</th>
+                </tr>
+                <% findcre.map((e)=>{ %>
+                    <tr>
+                        <td>
+                            <%= e._id %>
+                        </td>
+                        <td>
+                            <%= e.inventory_type %>
+                        </td>
+                        <td>
+                            <%= e.item_name %>
+                        </td>
+                        <td>
+                            <%= e.available_quantity %>
+                        </td>
+                    </tr>
+                    <%})%>
+            </table>
+
+        </div>
+        <div>
+            <h1>Order table</h1>
+            <table>
+                <tr>
+                    <th>customer_id</th>
+                    <th>inventory_id</th>
+                    <th>item_name</th>
+                    <th>quantity</th>
+                </tr>
+                <% findOrder.map((e)=>{ %>
+                    <tr>
+                        <td>
+                            <%= e._id %>
+                        </td>
+                        <td>
+                            <%= e._id %>
+                        </td>
+                        <td>
+                            <%= e.item_name %>
+                        </td>
+                        <td>
+                            <%= e.quantity %>
+                        </td>
+                    </tr>
+                    <%})%>
+            </table>
+        </div>
+        <div>
+            <h1>customer table</h1>
+            <table>
+                <tr>
+                    <th>customer_id</th>
+                    <th>customer_name</th>
+                    <th>email</th>
+                </tr>
+                <% finddel.map((e)=>{ %>
+                    <tr>
+                        <td>
+                            <%= e._id %>
+                        </td>
+                        <td>
+                            <%= e.customer_name %>
+                        </td>
+                        <td>
+                            <%= e.email %>
+                        </td>
+                    </tr>
+                    <%})%>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
