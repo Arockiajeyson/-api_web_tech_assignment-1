@@ -34,6 +34,9 @@ app.post('/createOrders',async(req,res)=>{
     try {
         const {customer_id,inventory_id,item_name,quantity}=req.body
         const inv =await CollSche.findOne({item_name:item_name})
+        if(available_quantity <=0){
+            return res.json('out of stock')
+        }
         const updaQ =inv.available_quantity-quantity
         const inv1 =await CollSche.updateOne({item_name:item_name},{available_quantity:updaQ})
         // console.log(inv1)
